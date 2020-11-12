@@ -130,26 +130,30 @@ const rawData = [
     title: 'Prepare test procedure',
     description: 'Write a procedure report with screenshots.',
     duration: '3hrs',
-    done: true
+    done: true,
+    _id: uuidv4(),
   },
   {
     title: 'Make audit app',
     description: 'Use React Native documentation.',
     duration: '24hrs',
-    done: false
+    done: false,
+    _id: uuidv4(),
   },
   {
     title: 'Prepare apprenticeship submission',
     description: 'Gather screenshots and write steps based on guidance',
     duration: '8hrs',
-    done: true
+    done: true,
+    _id: uuidv4(),
   },
   {
     title: 'Update apprenticeship off-job training',
     description: 'Update spreadsheet based on guidance and tasks done',
     duration: '1hr',
-    done: true
-  }
+    done: true,
+    _id: uuidv4(),
+  },
 ];
 
 const priorityTodoList = new TodoList(rawData);
@@ -159,7 +163,7 @@ const priorityTwoTodoList = new TodoList([
     title: 'Finalise second half of website project',
     description: 'Follow instructions and theory learned',
     duration: '24hrs',
-    done: false
+    done: false,
   },
 ]);
 
@@ -172,7 +176,7 @@ const newTodoData = {
   title: 'Read Discrete Maths',
   description: 'Follow instructions in coursera for which pages to read',
   duration: '24hrs',
-  done: false
+  done: false,
 };
 
 priorityTwoTodoList.addTodo(newTodoData);
@@ -190,7 +194,7 @@ console.log('Second Priority Todos', priorityTwoTodoList.getTodos());
 
 priorityTodoList.updateTodo(2, {
   title: 'Make audit and other app',
-  done: true
+  done: true,
 });
 console.log('Priority Todos after', priorityTodoList.getTodos());
 
